@@ -6,7 +6,7 @@
 /*   By: olcoste <olcoste@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:47:22 by olcoste           #+#    #+#             */
-/*   Updated: 2022/11/17 16:28:45 by olcoste          ###   ########.fr       */
+/*   Updated: 2022/11/28 18:48:30 by olcoste          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ char	*ft_strtrim(char const *s1, char const *s2)
 	if ((end - start) <= 0)
 	{
 		ret = malloc(sizeof(char) * 1);
+		if (!(ret))
+			return (NULL);
 		ret[0] = '\0';
 		return (ret);
 	}

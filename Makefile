@@ -6,13 +6,13 @@
 #    By: olcoste <olcoste@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 18:34:55 by olcoste           #+#    #+#              #
-#    Updated: 2022/11/21 18:17:58 by olcoste          ###   ########.fr        #
+#    Updated: 2022/11/30 14:31:09 by olcoste          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CC = cc -Wall -Werror -Wextra
+CC = gcc -Wall -Werror -Wextra
 
 RM = rm -f
 
@@ -53,10 +53,14 @@ SRC = 	ft_strncmp.c \
 
 BONUS_SRC = ft_lstnew.c \
             ft_lstadd_front.c \
+			ft_lstadd_back.c \
 			ft_lstsize.c \
 			ft_lstlast.c \
-			ft_lstadd_back.c \
-			ft_lstdelone.c
+			ft_lstdelone.c \
+			ft_lstclear.c \
+			ft_lstiter.c
+			
+			
 
 
 OBJ = $(SRC:.c=.o)
@@ -68,8 +72,8 @@ all: $(NAME)
 .c.o:
 	$(CC) -c $< -o $(<:.c=.o)
 
-$(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+$(NAME): $(OBJ) $(BONUS_OBJ)
+	ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
 
 bonus: $(BONUS_OBJ)
 	ar rcs $(NAME) $(BONUS_OBJ)
@@ -80,6 +84,7 @@ clean:
 
 fclean:	clean
 	$(RM) $(NAME)
+	$(RM) $(BONUS_OBJ)
 
 re: fclean all
 

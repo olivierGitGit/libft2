@@ -6,7 +6,7 @@
 /*   By: olcoste <olcoste@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 14:15:00 by olcoste           #+#    #+#             */
-/*   Updated: 2022/11/14 11:38:06 by olcoste          ###   ########.fr       */
+/*   Updated: 2022/11/30 13:58:57 by olcoste          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (ft_strlen(src));
 }
-
-/*int main(void)
-{
-	char src[] = "coucou";
-	char dest[10]; memset(dest, 'A', 10);
-	
-	printf("%li", ft_strlcpy(dest, src, 1));
-	return 0;
-}*/

@@ -6,7 +6,7 @@
 /*   By: olcoste <olcoste@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 14:23:00 by olcoste           #+#    #+#             */
-/*   Updated: 2022/11/09 18:16:56 by olcoste          ###   ########.fr       */
+/*   Updated: 2022/11/30 13:58:49 by olcoste          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ret[i] = '\0';
 	return (ret);
 }
-
-/*#include <stdio.h>
-int main()
-{
-	printf("%s", ft_strjoin("test de fou", " de malde de gedin"));
-	return 0;
-}*/

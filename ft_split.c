@@ -6,7 +6,7 @@
 /*   By: olcoste <olcoste@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 12:27:27 by olcoste           #+#    #+#             */
-/*   Updated: 2022/11/17 13:11:29 by olcoste          ###   ########.fr       */
+/*   Updated: 2022/11/30 13:59:46 by olcoste          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,54 +44,6 @@ static int	ft_wordsep(const char *s, char c)
 	}
 	return (j);
 }
-
-/*static int	ft_wordsep(char *str, char c)
-{
-	int	i;
-	int	is_word;
-	int	nbr_word;
-
-	i = 0;
-	is_word = 0;
-	nbr_word = 0;
-	while (str[i])
-	{
-		if (str[i] != c)
-			is_word = 1;
-		if (str[i] == c && is_word)
-		{
-			is_word = 0;
-			nbr_word++;
-		}
-		i++;
-	}
-	//if (is_word)
-		nbr_word++;
-	return (nbr_word);
-}*/
-
-/*{
-	int	i;
-	int	x;
-	int	key;
-
-	i = 0;
-	x = 1;
-	key = 0;
-	while (s[i])
-	{
-		if (s[i] == c && key == 1)
-		{
-			x++;
-			key = 0;
-		}
-		else if (s[i] != c)
-			key = 1;
-		i++;
-	}
-	return (x);
-}
-*/
 
 static char	*ft_strcpy(const char *s, int c)
 {
@@ -140,13 +92,3 @@ char	**ft_split(const char *s, char c)
 	ret[col] = NULL;
 	return (ret);
 }
-
-// comment je susis cence free
-
-/*int main(int argc, char *argv[])
-{
-	(void)argc;
-	free_tab(ft_split(argv[1], '-'), 2);
-	
-	return 0;
-}*/

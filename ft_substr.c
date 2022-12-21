@@ -6,7 +6,7 @@
 /*   By: olcoste <olcoste@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 14:24:43 by olcoste           #+#    #+#             */
-/*   Updated: 2022/11/16 12:06:51 by olcoste          ###   ########.fr       */
+/*   Updated: 2022/11/30 13:59:20 by olcoste          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ret[i] = '\0';
 	return (ret);
 }
-
-/*int main()
-{
-	printf("%s", ft_substr("abcefghifklmopqrs", 3, 5));
-	return 0;
-}*/

@@ -6,7 +6,7 @@
 /*   By: olcoste <olcoste@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 12:13:33 by olcoste           #+#    #+#             */
-/*   Updated: 2022/11/21 17:51:07 by olcoste          ###   ########.fr       */
+/*   Updated: 2022/11/28 14:10:35 by olcoste          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*temp;
+	t_list	*tmp;
 
-	temp = *lst;
+	tmp = *lst;
 	if (*lst == NULL && new != NULL)
 	{
 		*lst = new;
@@ -27,6 +27,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	while ((*lst)->next)
 		*lst = (*lst)->next;
 	(*lst)->next = new;
-	*lst = temp;
+	*lst = tmp;
 }
 // [1]->[2]->[3]->[4]->[5]->new->NULL

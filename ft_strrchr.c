@@ -6,7 +6,7 @@
 /*   By: olcoste <olcoste@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 14:53:10 by olcoste           #+#    #+#             */
-/*   Updated: 2022/11/09 17:58:47 by olcoste          ###   ########.fr       */
+/*   Updated: 2022/11/30 13:59:13 by olcoste          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
-
-/*#include <stdio.h>
-int main(void)
-{
-	printf("%s", ft_strrchr(" aaa aaabaaabaa\n", '\0'));
-	printf("%s", strrchr(" aaa aaabaaabaa", '\0'));
-	return 0;
-}*/

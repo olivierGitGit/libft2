@@ -6,7 +6,7 @@
 /*   By: olcoste <olcoste@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 14:42:46 by olcoste           #+#    #+#             */
-/*   Updated: 2022/11/17 12:57:20 by olcoste          ###   ########.fr       */
+/*   Updated: 2022/11/28 17:02:10 by olcoste          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,9 @@ char	*ft_strchr(const char *s, int c)
 	send = (char *)s;
 	if (c == 0)
 		return (&send[ft_strlen(send)]);
-	else if (c > 255)
-		return (send);
 	while (send[i])
 	{
-		if (send[i] == c)
+		if (send[i] == (char)c)
 			return (&send[i]);
 		i++;
 	}

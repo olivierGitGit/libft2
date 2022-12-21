@@ -6,7 +6,7 @@
 /*   By: olcoste <olcoste@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 14:47:32 by olcoste           #+#    #+#             */
-/*   Updated: 2022/11/09 15:26:17 by olcoste          ###   ########.fr       */
+/*   Updated: 2022/11/30 13:59:08 by olcoste          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strnstr(const char	*meule, const char *aiguille, size_t len)
 	size_t	x;
 
 	i = 0;
+	if ((!meule || !aiguille) && len == 0)
+		return (NULL);
 	if (aiguille[i] == '\0')
 		return ((char *)meule);
 	while (meule[i] && len != i)
@@ -33,15 +35,3 @@ char	*ft_strnstr(const char	*meule, const char *aiguille, size_t len)
 	}
 	return (0);
 }
-
-/*#include <string.h>
-#include <stdio.h>
-int main(void)
-{
-	const char *test = "est de fou";
-	const char *test1 = "de";
-
-	printf("%s\n",ft_strnstr("test des de fou", "t\0", 0));
-	printf("%s", strnstr("test des de fou", "t\0", 0));
-	return 0;
-}*/
